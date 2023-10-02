@@ -15,7 +15,7 @@ public class TaxiServiceChooserTest {
         );
 
         List<String> result = TaxiServiceChooser.findSuitableServices(taxiServices, 5, 331, 25, "cash");
-        assertEquals(Arrays.asList("Yandex Taxi"), result);  // Should return an empty list
+        assertEquals(List.of("Yandex Taxi"), result);  // Should return an empty list
     }
 
     @Test
@@ -39,6 +39,6 @@ public class TaxiServiceChooserTest {
         );
 
         List<String> result = TaxiServiceChooser.findSuitableServices(taxiServices, 3, 100, 20, "any");
-        assertEquals(Arrays.asList(), result);  // Should return an empty list
+        assertEquals(List.of(), result);  // Should return an empty list
     }
 }
